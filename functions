@@ -1,0 +1,42 @@
+ 
+function portCheck { sudo netstat -tapen | grep ":$1 "; }
+export -f portCheck
+ 
+function portOpen { sudo iptables -A INPUT -p tcp --dport $1 -j ACCEPT; }
+export -f portOpen
+
+function portListen { sudo netstat -ntlp | grep LISTEN; }
+export -f portListen
+
+function vimclean { rm -r **/*.swp; }
+export -f vimclean
+
+
+
+# $ sudo echo "colorscheme:wgallios" >> /etc/multitail.conf
+# adds fake scheme to multitail conf
+function log { multitail -C -f /var/log/$1/$1.log; }
+export -f log
+
+alias wmongo='mongodb -u wgallios -p kornman1 --authenticationDatabase admin'
+
+_log () {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local ldir=/var/www
+    COMPREPLY=( $(compgen -W "$(ls $ldir)" -- $cur) )
+}
+
+complete -F _log log
+
+_cdw () {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local pdir=/var/www
+    COMPREPLY=( $(compgen -W "$(ls $pdir)" -- $cur) )
+}
+
+complete -F _cdw cdw
+
+function cdw { cd /var/www/$1; }
+export -f cdw
+
+

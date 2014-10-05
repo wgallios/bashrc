@@ -1,0 +1,12 @@
+
+
+alias rehash='source ~/.bashrc'
+alias gitmod='git status | grep modified' 
+alias lsa='ls -AlFh --color=always'
+alias lsd='ls -AlFh --color | grep ^drw'
+alias lsnd='ls -AlFh --color | grep -v ^drw'
+alias globalnpm='find -P /usr/local/lib/node_modules/ -maxdepth 1 -mindepth 1 -printf "%f\n" | sort -n -k2 | cut -f 1'
+alias bsh='vim + ~/.bashrc'
+alias vimrc='vim + ~/.vim/vimrc'
+alias mongodb='mongo'
+alias cdv='cd /var/www'
