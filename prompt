@@ -32,4 +32,4 @@ GIT_PS1_SHOWDIRTYSTATE=true
 
 force_color_prompt=yes
 
-PS1="$HC$FYEL[$FBLE\u@\h$FYEL]:\w$RS$FCYN"'$(__git_ps1)'"$FWHT \$$RS "
+PS1="$HC$FYEL[$FBLE\u@\h$FYEL]:\w$RS$FCYN"'$(__git_ps1)'"$FWHT\$$RS "
