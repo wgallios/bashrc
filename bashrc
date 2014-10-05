@@ -1,3 +1,3 @@
-source alias
-source functions
-source prompt
+source ./bashrc/alias
+source ./bashrc/functions
+source ./bashrc/prompt
