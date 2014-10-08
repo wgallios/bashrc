@@ -1,4 +1,5 @@
 
+#bash alias'
 
 alias rehash='source ~/.bashrc'
 alias gitmod='git status | grep modified' 
@@ -10,3 +11,5 @@ alias bsh='vim + ~/.bashrc'
 alias vimrc='vim + ~/.vim/vimrc'
 alias mongodb='mongo'
 alias cdv='cd /var/www'
+alias gwatch='grunt watch &'
+alias gstop='pkill grunt'

@@ -1,4 +1,6 @@
- 
+
+#bash cli functions
+
 function portCheck { sudo netstat -tapen | grep ":$1 "; }
 export -f portCheck
  
