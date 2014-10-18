@@ -12,14 +12,10 @@ export -f portListen
 function vimclean { rm -r **/*.swp; }
 export -f vimclean
 
-
-
-# $ sudo echo "colorscheme:wgallios" >> /etc/multitail.conf
-# adds fake scheme to multitail conf
-function log { multitail -C -f /var/log/$1/$1.log; }
+function log { multitail -f /var/log/$1/$1.log; }
 export -f log
-
-alias wmongo='mongodb -u wgallios -p kornman1 --authenticationDatabase admin'
+function logc { multitail -Cs -f /var/log/$1/$1.log; }
+export -f logc
 
 _log () {
     local cur=${COMP_WORDS[COMP_CWORD]}
@@ -28,6 +24,7 @@ _log () {
 }
 
 complete -F _log log
+complete -F _log logc
 
 _cdw () {
     local cur=${COMP_WORDS[COMP_CWORD]}
