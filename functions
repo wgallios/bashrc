@@ -9,10 +9,11 @@ export -f portOpen
 function portListen { sudo netstat -ntlp | grep LISTEN; }
 export -f portListen
 
-function vimclean { rm -r **/*.swp; }
+function vimclean { rm -r '**/*.swp'; }
 export -f vimclean
 
 function log { multitail -f /var/log/$1/$1.log; }
+# function log { grc tail -f /var/log/$1/$1.log; }
 export -f log
 function logc { multitail -Cs -f /var/log/$1/$1.log; }
 export -f logc
