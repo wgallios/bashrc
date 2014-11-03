@@ -10,7 +10,14 @@ alias globalnpm='find -P /usr/local/lib/node_modules/ -maxdepth 1 -mindepth 1 -p
 alias vimrc='vim + ~/.vim/vimrc'
 alias mongodb='mongo'
 alias cdv='cd /var/www'
-alias gwatch='grunt watch &'
-alias gstop='pkill grunt'
-alias g='grunt'
-alias gt='git'
+alias grwatch='grunt watch &'
+alias grstop='pkill grunt'
+alias gr='grunt'
+
+# Git aliases
+alias g='git'
+alias status='git status'
+alias add='git add'
+alias push='git push'
+alias commit='git commit'
+alias pull='git pull'
