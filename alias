@@ -13,6 +13,7 @@ alias cdv='cd /var/www'
 alias grwatch='grunt watch &'
 alias grstop='pkill grunt'
 alias gr='grunt'
+alias v='vim'
 
 # Git aliases
 alias g='git'
