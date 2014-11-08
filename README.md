@@ -1,4 +1,4 @@
-bashrc
+### #!/bin/bash
 ======
 
 Bash Commands
