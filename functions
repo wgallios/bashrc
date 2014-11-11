@@ -65,8 +65,17 @@ function bsh {
 export -f bsh
 
 
-function grp {
+# grep recursive and not case sensative
+function grepri {
     echo "Searching: $@"
     grep -r -i -n $1 $2
 }
-export -f grp
+export -f grepri
+
+
+# grep recursive and IS case sensative
+function grepr {
+    echo "Searching: $@"
+    grep -r -n $1 $2
+}
+export -f grepr
