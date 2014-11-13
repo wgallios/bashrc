@@ -74,7 +74,15 @@ export -f bsh
 
 # grep recursive and not case sensative
 function grepri {
-    echo -e "\nSearching: \"$BOLD$1$RESET\" in $BOLD$2$RESET directory ...\n"
+
+    if [ "$2" = /* ];
+    then
+        GPATH="$2"
+    else
+        GPATH="$(cd $2; pwd;)"
+    fi
+
+    echo -e "\nSearching: \"$BOLD$1$RESET\" in $BOLD$GPATH$RESET directory ...\n"
     grep -r -i -n $1 $2
 }
 export -f grepri
@@ -82,7 +90,15 @@ export -f grepri
 
 # grep recursive and IS case sensative
 function grepr {
-    echo "Searching: $@"
+
+    if [ "$2" = /* ];
+    then
+        GPATH="$2"
+    else
+        GPATH="$(cd $2; pwd;)"
+    fi
+
+    echo -e "\nSearching: \"$BOLD$1$RESET\" in $BOLD$GPATH$RESET directory ...\n"
     grep -r -n $1 $2
 }
 export -f grepr
