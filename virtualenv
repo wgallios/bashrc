@@ -1,0 +1,11 @@
+#virtual env for python
+if [ -r "/usr/local/bin/virtualenvwrapper.sh" ]; then
+    export WORKON_HOME=$HOME/.Envs
+    export PROJECT_HOME=$HOME/Projects
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
