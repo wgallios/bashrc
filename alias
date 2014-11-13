@@ -14,6 +14,8 @@ alias grwatch='grunt watch &'
 alias grstop='pkill grunt'
 alias gr='grunt'
 alias v='vim'
+alias up='cd ..'
+alias back='cd -'
 
 # Git aliases
 alias g='git'

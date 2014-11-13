@@ -38,9 +38,18 @@ complete -F _cdw cdw
 function cdw { cd /var/www/$1; }
 export -f cdw
 
+# shortcut for home folder
+_h () {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local pdir=~/
+    COMPREPLY=( $(compgen -W "$(ls $pdir)" -- $cur) )
+}
+
+complete -F _h h
+function h { cd ~/$1; }
+export -f h
 
 # for editing ~/bashrc/ files
-
 _bsh () {
     local cur=${COMP_WORDS[COMP_CWORD]}
     local pdir=~/bashrc
@@ -67,7 +76,7 @@ export -f bsh
 
 # grep recursive and not case sensative
 function grepri {
-    echo "Searching: $@"
+    echo -e "\nSearching: \"${BOLD}$1${color_off}\" in ${BOLD}$2${color_off} directory ...\n"
     grep -r -i -n $1 $2
 }
 export -f grepri
