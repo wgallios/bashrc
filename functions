@@ -74,7 +74,7 @@ export -f bsh
 
 # grep recursive and not case sensative
 function grepri {
-    # echo -e "\nSearching: \"$BOLD$1$RESET\" in $BOLD$2$RESET directory ...\n"
+    echo -e "\nSearching: \"$BOLD$1$RESET\" in $BOLD$2$RESET directory ...\n"
     grep -r -i -n $1 $2
 }
 export -f grepri
