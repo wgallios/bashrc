@@ -20,6 +20,12 @@ BMAG="\[\033[45m\]" # background magenta
 BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
+FLY='\e[93m' # foreground light yellow
+FLRED='\e[91m' #foreground light red
+
+BLY='\e[103m' #background light yellow
+BLRED='\e[101m' #background light red
+
 green='\e[0;32m' # Green
 yellow='\e[0;33m' # Yellow
 white='\e[0;37m' # White
