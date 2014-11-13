@@ -29,7 +29,9 @@ BLRED='\e[101m' #background light red
 green='\e[0;32m' # Green
 yellow='\e[0;33m' # Yellow
 white='\e[0;37m' # White
-color_off='\e[0m' # Resets all attributes
+
+color_off='\e[0m' # Resets all attributes - deprecated
+RESET='\e[0m'
 
 BOLD='\e[1m'
 UNDERL='\e[4m'
