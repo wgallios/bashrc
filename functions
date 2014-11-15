@@ -49,6 +49,17 @@ complete -F _h h
 function h { cd ~/$1; }
 export -f h
 
+# shortcut for Projects dir
+_pro () {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local pdir=~/Projects
+    COMPREPLY=( $(compgen -W "$(ls $pdir)" -- $cur) )
+}
+
+complete -F _pro pro
+function pro { cd ~/Projects/$1; }
+export -f pro
+
 # for editing ~/bashrc/ files
 _bsh () {
     local cur=${COMP_WORDS[COMP_CWORD]}
@@ -59,7 +70,7 @@ _bsh () {
 complete -F _bsh bsh
 
 function bsh {
-    
+
     if [[ -n $1 ]];
     then
         echo "Editing ~/bashrc/$1"
@@ -69,6 +80,7 @@ function bsh {
         vim + ~/.bashrc;
     fi
 }
+
 export -f bsh
 
 
