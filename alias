@@ -16,6 +16,7 @@ alias gr='grunt'
 alias v='vim'
 alias up='cd ..'
 alias back='cd -'
+alias ack='ack-grep'
 
 # Git aliases
 alias g='git'
