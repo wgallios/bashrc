@@ -17,7 +17,7 @@ alias v='vim'
 alias up='cd ..'
 alias back='cd -'
 alias ack='ack-grep'
-
+alias rm='rm -i' # prompts before deleting
 # Git aliases
 alias g='git'
 alias status='git status'
