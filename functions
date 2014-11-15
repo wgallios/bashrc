@@ -31,7 +31,7 @@ export -f logc
 _log () {
     local cur=${COMP_WORDS[COMP_CWORD]}
     local ldir=/var/www
-    COMPREPLY=( $(compgen -W "$(ls $ldir)" -- $cur) )
+    COMPREPLY=( $(compgen -W "$(ls -a $ldir)" -- $cur) )
 }
 
 complete -F _log log
@@ -40,7 +40,7 @@ complete -F _log logc
 _cdw () {
     local cur=${COMP_WORDS[COMP_CWORD]}
     local pdir=/var/www
-    COMPREPLY=( $(compgen -W "$(ls $pdir)" -- $cur) )
+    COMPREPLY=( $(compgen -W "$(ls -a $pdir)" -- $cur) )
 }
 
 complete -F _cdw cdw
@@ -52,7 +52,7 @@ export -f cdw
 _h () {
     local cur=${COMP_WORDS[COMP_CWORD]}
     local pdir=~/
-    COMPREPLY=( $(compgen -W "$(ls $pdir)" -- $cur) )
+    COMPREPLY=( $(compgen -W "$(ls -a $pdir)" -- $cur) )
 }
 
 complete -F _h h
@@ -63,7 +63,7 @@ export -f h
 _pro () {
     local cur=${COMP_WORDS[COMP_CWORD]}
     local pdir=~/Projects
-    COMPREPLY=( $(compgen -W "$(ls $pdir)" -- $cur) )
+    COMPREPLY=( $(compgen -W "$(ls -a $pdir)" -- $cur) )
 }
 
 complete -F _pro pro
@@ -74,7 +74,7 @@ export -f pro
 _bsh () {
     local cur=${COMP_WORDS[COMP_CWORD]}
     local pdir=~/bashrc
-    COMPREPLY=( $(compgen -W "$(ls $pdir)" -- $cur) )
+    COMPREPLY=( $(compgen -W "$(ls -a $pdir)" -- $cur) )
 }
 
 complete -F _bsh bsh
