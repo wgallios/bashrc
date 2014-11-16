@@ -124,3 +124,22 @@ function grepr {
     grep -r -n $1 $2
 }
 export -f grepr
+
+
+# Tmux functions
+
+function tattach {
+    tmux attach -t $1;
+}
+export -f tattach
+
+function tswitch {
+    tmux switch -t $1;
+}
+export -f tswitch
+
+function tdetach {
+    echo "Tmux is detaching. You can also detach with Ctrl-A + D"
+    tmux detach
+}
+export -f tdetach

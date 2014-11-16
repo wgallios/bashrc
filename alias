@@ -18,6 +18,7 @@ alias up='cd ..'
 alias back='cd -'
 alias ack='ack-grep'
 alias rm='rm -i' # prompts before deleting
+
 # Git aliases
 alias g='git'
 alias status='git status'
@@ -27,3 +28,10 @@ alias pull='git pull'
 alias branch='git branch'
 alias checkout='git checkout'
 alias clone='git clone'
+
+# tmux aliases
+alias t='tmux'
+alias tlist='tmux list-sessions'
+alias tvsplit='tmux split-window -h'
+alias tsplit='tmux split-window'
+alias tswap='tmux swap-pane'
