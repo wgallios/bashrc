@@ -35,3 +35,7 @@ alias tlist='tmux list-sessions'
 alias tvsplit='tmux split-window -h'
 alias tsplit='tmux split-window'
 alias tswap='tmux swap-pane'
+
+# screen
+alias s='screen'
+alias sls='screen -ls'

@@ -143,3 +143,15 @@ function tdetach {
     tmux detach
 }
 export -f tdetach
+
+# Screen re-attach to screen
+function sre {
+    screen -r $1
+}
+export -f sre
+
+# Screen new screen session with name
+function snew {
+    screen -S $1
+}
+export -f snew
