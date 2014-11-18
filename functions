@@ -145,9 +145,17 @@ function tdetach {
 export -f tdetach
 
 # Screen re-attach to screen
-function sre {
-    screen -r $1
+
+# following command returns only session names from scren -ls
+# sls | sed '1d' | sed 'N;$!P;$!D;$d' | sed 's/ //' | sed 's/[  ].*$//'
+_sre () {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local list=`screen -ls | sed '1d' | sed 'N;$!P;$!D;$d' | sed 's/ //' | sed 's/[  ].*$//'`
+    COMPREPLY=( $(compgen -W "$list" -- $cur) )
 }
+
+complete -F _sre sre
+function sre { screen -r $1; }
 export -f sre
 
 # Screen new screen session with name

@@ -1,8 +1,8 @@
 
-source $DIR/colors
-
 # present working directory
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source $DIR/colors
 
 export TERM='xterm-256color'
 
